@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+{% block title %}Contact us{% endblock %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<title>Contact us</title>
+</head>
+<style>
+
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;}
+
+
+select,input{
+        width: 100%;
+        height: 50px;
+        border: 1px solid #999;
+        font-size: 18px;
+        color: black;
+        background-color: none;
+        border-radius: 5px;
+        box-shadow: 4px 4px #ccc;
+}
+
+
+
+
+
+    </style>
+<body>
+	<div style="padding-top: 30px;"><h1 style="text-align: center;">Contact us</h1></div>
+	<div>
+<form  method="POST">
+	<div class="row">
+
+		 <div class="col-md-6">
+		 <h4>Name</h4>
+         <p><input type = "text" name = "fname" placeholder="Enter First Name"></p>
+     </div>
+     <div class="col-md-6">
+         <h4>Surname</h4>
+         <p><input type = "text" name = "surname" placeholder="Enter Last Name"></p>
+     </div></div>
+     <div class="row">
+     <div class="col-md-6">
+         <h4>email</h4>
+         <p><input type = "text" name = "email" placeholder="Enter email"></p>
+         </div>
+         <div class="col-md-6">
+         <h4>phone</h4>
+         <p><input type = "text" name = "phone" placeholder="Enter Phone no."></p>
+         </div></div>
+         <div class="col-md-12">
+         <h4>message</h4>
+         <textarea name="comment" rows="4" class="form-control"></textarea>
+     </div>
+         <p><input type = "submit" value = "submit" /></p>
+
+</form>
+<div>
+	<p>{{msg2}}</p>
+</div>
+</div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends 'layout.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<!doctype html>
+    <html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    </head>
+    <style>
+
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  /*padding: 14px 20px;*/
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;}
+
+
+select,input{
+        width: 100%;
+        height: 50px;
+        border: 1px solid #999;
+        font-size: 18px;
+        color: black;
+        background-color: none;
+        border-radius: 5px;
+        box-shadow: 4px 4px #ccc;
+}
+
+
+
+
+
+    </style>
+ <body>   
+<h2>Crop Doctor</h2>
+<div>
+    <p>Enter the details below:</p>
+    <form action = "http://localhost:5000/pythonlogin/profile" method = "POST">
+        <div>
+            <div class="row">
+                <div class="col-md-6">
+         <h4>Soil Type</h4>
+            <select name="soiltype" id="soiltype" >
+                <option value="" disabled selected>Select Soil Type</option>
+               <option value="black soil">Black Soil</option>
+               <option value="alluvial soil">alluvial soil</option>
+               <option value="loamy soil">loamy soil</option>
+               <option value="clay soil">clay soil</option>
+               <option value="sandy soil">sandy soil</option>
+               <option value="red sandy soil">red sandy soil</option>
+            </select>
+        </div>
+        <div class="col-md-6">
+            <h4>Irrigation Type</h4>
+            
+             <select name="irrigation" id="irrigation">
+                <option value="" disabled selected>Select Irrigation Type</option>
+               <option value="sprinkler">sprinkler</option>
+               <option value="drip">drip</option>
+               <option value="flood">flood</option>
+            </select>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-6">
+         <h4>City</h4>
+         <p><input type = "text" name = "city" placeholder="Enter your city name"></p>
+     </div>
+     <div class="col-md-6">
+         <h4>Season</h4>
+         <select name="season" id="season" >
+                <option value="" disabled selected>Select season</option>
+               <option value="rabi">rabi</option>
+               <option value="kharif">kharif</option>
+               <option value="whole year">whole year</option>
+               <option value="zaid">zaid</option>
+        </select>
+    </div>
+    </div>
+     
+ <div class="row">
+
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+         <input action = "p1" type = "submit" value = "submit" />
+     </div>
+         <div class="col-md-3"></div>
+     </div>
+ </div>
+      </form>
+ 
+
+</div>
+<div>
+<p><a><b>{{msg1}}</b></a></p>
+</div>
+</body>
+</html>
+{% endblock %}
